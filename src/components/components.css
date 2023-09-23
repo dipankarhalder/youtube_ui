@@ -1,0 +1,145 @@
+.app_header_wrapper {
+  display: flex;
+  height: 56px;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--themeborder);
+
+  & > .app_search_wrap {
+    display: flex;
+
+    & > .app_search_form {
+      & > form {
+        border-radius: 40px;
+        padding: 0 0 0 20px;
+        display: flex;
+        border: 1px solid var(--themeInputborder);
+
+        & > input {
+          width: 400px;
+          height: 36px;
+          line-height: 36px;
+          border-radius: 4px;
+          font-size: 13px;
+          border: 0px solid var(--trans);
+        }
+
+        & > button {
+          height: 36px;
+          width: 50px;
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          justify-content: center;
+          background: var(--trans);
+          border: 0px solid var(--trans);
+
+          & > svg {
+            float: left;
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.app_sidebar_cover {
+  display: flex;
+  flex-direction: column;
+
+  & > .app_logo_wrap {
+    display: flex;
+    padding: 18px 24px;
+    align-items: center;
+    margin-bottom: 12px;
+
+    & > span {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+
+      & > svg {
+        float: left;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    & > a {
+      float: left;
+      width: 100px;
+      height: 22px;
+
+      img {
+        float: left;
+        width: 90px;
+        height: 20px;
+      }
+    }
+  }
+
+  & > .app_scrollable_nav {
+    display: flex;
+    overflow: auto;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+
+    & > .app_category_navigation {
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      border-bottom: 1px solid var(--themeborder);
+
+      &:last-child {
+        border-bottom: 0px solid var(--trans);
+      }
+
+      & > h3 {
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 0px 12px 8px;
+        font-family: var(--dsemibold);
+      }
+
+      & > ul li {
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 9px 12px;
+        align-items: center;
+        border-radius: 4px;
+        transition: 0.5s;
+
+        &:hover {
+          transition: 0.5s;
+          background: var(--white);
+        }
+
+        & > svg {
+          float: left;
+          width: 20px;
+          height: 20px;
+          margin-right: 14px;
+        }
+
+        & > span {
+          float: left;
+          width: 20px;
+          height: 20px;
+          margin-right: 14px;
+          border-radius: 50%;
+          background: var(--themeborder);
+        }
+
+        & > p {
+          font-size: 14px;
+          font-weight: var(--dbold);
+        }
+      }
+    }
+  }
+}
