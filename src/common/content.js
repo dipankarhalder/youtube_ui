@@ -1,0 +1,17 @@
+export const topArr = [
+  'All',
+  'Music',
+  'Kapil Sharma',
+  'Dramedy',
+  'Mixes',
+  'CSS',
+  'Crickets',
+  'Data type',
+  'Data Structure',
+  'Algorithms',
+  'CID',
+  'Dramedy',
+  'Mixes',
+  'CSS',
+  'Crickets',
+];

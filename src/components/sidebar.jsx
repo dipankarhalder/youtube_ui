@@ -1,33 +1,10 @@
+import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { AiOutlineYoutube } from 'react-icons/ai';
-import {
-  HiOutlineMenuAlt1,
-  HiOutlineHome,
-  HiOutlineLightningBolt,
-  HiOutlineCheckCircle,
-  HiOutlineInboxIn,
-  HiOutlineCursorClick,
-  HiOutlineRefresh,
-  HiOutlineClock,
-  HiOutlineThumbUp,
-  HiOutlineFire,
-  HiOutlineMusicNote,
-  HiOutlineShoppingBag,
-  HiOutlineCog,
-  HiOutlineFlag,
-  HiOutlinePlay,
-  HiOutlineLightBulb,
-  HiOutlineNewspaper,
-  HiOutlineStatusOnline,
-  HiOutlineQuestionMarkCircle,
-  HiOutlineInformationCircle,
-  HiOutlineScissors,
-  HiOutlineVolumeUp,
-} from 'react-icons/hi';
+import { HiOutlineMenuAlt1 } from 'react-icons/hi';
+import { routerJson } from '../common/router';
 
 import './components.css';
 import reactLogo from '../assets/images/logo.svg';
-import { Fragment } from 'react';
 
 export const Sidebar = () => {
   return (
@@ -43,31 +20,20 @@ export const Sidebar = () => {
       <div className="app_scrollable_nav">
         <div className="app_category_navigation">
           <ul>
-            <li>
-              <HiOutlineHome /> <p>Home</p>
-            </li>
-            <li>
-              <HiOutlineLightningBolt /> <p>Shorts</p>
-            </li>
-            <li>
-              <HiOutlineCheckCircle /> <p>Subscriptions</p>
-            </li>
+            {routerJson.general.map((item, idx) => (
+              <li key={idx}>
+                <item.icon /> <p>{item.title}</p>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="app_category_navigation">
           <ul>
-            <li>
-              <HiOutlineInboxIn /> <p>Library</p>
-            </li>
-            <li>
-              <HiOutlineRefresh /> <p>History</p>
-            </li>
-            <li>
-              <HiOutlineClock /> <p>Watch later</p>
-            </li>
-            <li>
-              <HiOutlineThumbUp /> <p>Liked videos</p>
-            </li>
+            {routerJson.genOther.map((item, idx) => (
+              <li key={idx}>
+                <item.icon /> <p>{item.title}</p>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="app_category_navigation">
@@ -100,61 +66,31 @@ export const Sidebar = () => {
           </ul>
         </div>
         <div className="app_category_navigation">
-          <h3>Explore</h3>
+          <h3>{routerJson.explore.heading}</h3>
           <ul>
-            <li>
-              <HiOutlineFire /> <p>Trending</p>
-            </li>
-            <li>
-              <HiOutlineShoppingBag /> <p>Shopping</p>
-            </li>
-            <li>
-              <HiOutlineMusicNote /> <p>Music</p>
-            </li>
-            <li>
-              <HiOutlinePlay /> <p>Movies</p>
-            </li>
-            <li>
-              <HiOutlineStatusOnline /> <p>Live</p>
-            </li>
-            <li>
-              <HiOutlineCursorClick /> <p>Gaming</p>
-            </li>
-            <li>
-              <HiOutlineNewspaper /> <p>News</p>
-            </li>
-            <li>
-              <HiOutlineLightBulb /> <p>Learning</p>
-            </li>
-            <li>
-              <HiOutlineScissors /> <p>Fashion &amp; Beauty</p>
-            </li>
+            {routerJson.explore.lists.map((item, idx) => (
+              <li key={idx}>
+                <item.icon /> <p>{item.title}</p>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="app_category_navigation">
           <ul>
-            <li>
-              <AiOutlineYoutube /> <p>YouTube Premium</p>
-            </li>
-            <li>
-              <HiOutlineVolumeUp /> <p>YouTube Music</p>
-            </li>
+            {routerJson.youSel.map((item, idx) => (
+              <li key={idx}>
+                <item.icon /> <p>{item.title}</p>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="app_category_navigation">
           <ul>
-            <li>
-              <HiOutlineCog /> <p>Settings</p>
-            </li>
-            <li>
-              <HiOutlineFlag /> <p>Report history</p>
-            </li>
-            <li>
-              <HiOutlineQuestionMarkCircle /> <p>Help</p>
-            </li>
-            <li>
-              <HiOutlineInformationCircle /> <p>Send feedback</p>
-            </li>
+            {routerJson.other.map((item, idx) => (
+              <li key={idx}>
+                <item.icon /> <p>{item.title}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
