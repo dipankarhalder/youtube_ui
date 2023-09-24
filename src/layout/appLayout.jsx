@@ -1,5 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from '../components/sidebar';
+import { Header } from '../components/header';
+import { TopScroll } from '../components/topScroll';
 
 import './layout.css';
 
@@ -10,7 +12,11 @@ export const AppLayout = () => {
         <Sidebar />
       </div>
       <div className="app_video_content_wrapper">
-        <Outlet />
+        <Header />
+        <div className="app_all_video_content">
+          <TopScroll />
+          <Outlet />
+        </div>
       </div>
     </div>
   );
