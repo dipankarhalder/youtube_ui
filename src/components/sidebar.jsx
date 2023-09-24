@@ -22,10 +22,12 @@ import {
   HiOutlineQuestionMarkCircle,
   HiOutlineInformationCircle,
   HiOutlineScissors,
+  HiOutlineVolumeUp,
 } from 'react-icons/hi';
 
 import './components.css';
 import reactLogo from '../assets/images/logo.svg';
+import { Fragment } from 'react';
 
 export const Sidebar = () => {
   return (
@@ -71,46 +73,30 @@ export const Sidebar = () => {
         <div className="app_category_navigation">
           <h3>Subscriptions</h3>
           <ul>
-            <li>
-              <span></span>
-              <p>SonyLiv</p>
-            </li>
-            <li>
-              <span></span>
-              <p>Technical Suneja</p>
-            </li>
-            <li>
-              <span></span>
-              <p>Thapa Technical</p>
-            </li>
-            <li>
-              <span></span>
-              <p>ByteGrad</p>
-            </li>
-            <li>
-              <span></span>
-              <p>Love Babbar</p>
-            </li>
-            <li>
-              <span></span>
-              <p>SonyLiv</p>
-            </li>
-            <li>
-              <span></span>
-              <p>Technical Suneja</p>
-            </li>
-            <li>
-              <span></span>
-              <p>Thapa Technical</p>
-            </li>
-            <li>
-              <span></span>
-              <p>ByteGrad</p>
-            </li>
-            <li>
-              <span></span>
-              <p>Love Babbar</p>
-            </li>
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((idx) => (
+              <Fragment key={idx}>
+                <li>
+                  <span></span>
+                  <p>SonyLiv</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>Technical Suneja</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>Thapa Technical</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>ByteGrad</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>Love Babbar</p>
+                </li>
+              </Fragment>
+            ))}
           </ul>
         </div>
         <div className="app_category_navigation">
@@ -149,6 +135,9 @@ export const Sidebar = () => {
           <ul>
             <li>
               <AiOutlineYoutube /> <p>YouTube Premium</p>
+            </li>
+            <li>
+              <HiOutlineVolumeUp /> <p>YouTube Music</p>
             </li>
           </ul>
         </div>

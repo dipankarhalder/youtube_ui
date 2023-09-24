@@ -27,12 +27,18 @@
   --white: #ffffff;
   --black: #000000;
   --gray: #bbbbbb;
+  --darkgray: #7c7c7c;
 
   /* theme color */
   --themered: #ff0000;
+  --themeblue: #0076e5;
+
+  --themebtn: #f8f9fa;
   --themesidebar: #f7f7f7;
   --themeborder: #e9e9e9;
   --themeInputborder: #dfe1e6;
+
+  --cardShadow: 0px 1px 1px #091e4240, 0px 0px 1px #091e424f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
