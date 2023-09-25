@@ -12,9 +12,11 @@ export const AppLayout = () => {
         <Sidebar />
       </div>
       <div className="app_video_content_wrapper">
-        <Header />
-        <div className="app_all_video_content">
+        <div className="app_fixed_top_section">
+          <Header />
           <TopScroll />
+        </div>
+        <div className="app_all_video_content">
           <Outlet />
         </div>
       </div>

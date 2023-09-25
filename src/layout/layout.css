@@ -15,34 +15,23 @@
     flex-wrap: wrap;
     margin-left: 240px;
     position: relative;
-    padding-top: 64px;
+    padding-top: 113px;
     width: calc(100% - 240px);
+
+    & > .app_fixed_top_section {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      z-index: 1;
+      background: var(--white);
+      width: calc(100% - 240px);
+      border-bottom: 1px solid var(--themeborder);
+    }
 
     & > .app_all_video_content {
       display: flex;
       padding: 20px 24px 0;
       flex-direction: column;
-
-      & > .app_top_scroller {
-        display: flex;
-        margin-bottom: 40px;
-
-        & > p {
-          border-radius: 4px;
-          padding: 5px 16px;
-          background: var(--themebtn);
-          margin-right: 10px;
-          cursor: pointer;
-          transition: 0.5s;
-
-          &:hover,
-          &:first-child {
-            transition: 0.5s;
-            color: var(--white);
-            background: var(--black);
-          }
-        }
-      }
     }
   }
 }
